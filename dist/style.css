@@ -1,0 +1,30 @@
+
+:root{--flix-bg:#141414;--flix-panel:#181818;--flix-text:#e5e5e5;--flix-sub:#b3b3b3;--flix-accent:#e50914;--flix-accent2:#f40612;--flix-shadow:0 8px 28px rgba(0,0,0,.45);--flix-radius:14px;--flix-radius-lg:20px;--flix-card:#202020;--flix-font: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial;}
+html,body{background:var(--flix-bg)!important;color:var(--flix-text)!important;font-family:var(--flix-font)!important;}a{color:var(--flix-text)}
+.skinHeader{background:linear-gradient(180deg, rgba(0,0,0,.7), rgba(0,0,0,0))!important;backdrop-filter:saturate(120%) blur(6px)}
+#flix-billboard{position:relative;min-height:48vh;max-height:72vh;display:flex;align-items:end;padding:8vh 5vw 4vh;background:#000;overflow:hidden}
+#flix-billboard .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.7);transform:scale(1.06);transition:opacity .6s ease}
+#flix-billboard .bg.fadeout{opacity:0}
+#flix-billboard .mask{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.0) 0%, rgba(0,0,0,.6) 60%, rgba(0,0,0,.85) 100%);}
+#flix-billboard .content{position:relative;z-index:2;max-width:min(900px,80vw)}
+#flix-billboard h1{font-size:clamp(28px,6vw,64px);line-height:1.05;font-weight:800;margin:0 0 12px}
+#flix-billboard p{color:var(--flix-sub);max-width:60ch;margin:0 0 16px}
+#flix-billboard .actions{display:flex;gap:12px}
+#flix-billboard .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:700}
+#flix-billboard .btn.play{background:var(--flix-accent);color:#fff}
+#flix-billboard .btn.more{background:#fff;color:#000}
+.section, .verticalSection{padding-inline:5vw!important}
+.sectionTitle{font-weight:800;letter-spacing:.2px}
+.itemsContainer .card{margin-right:1vw!important}
+.card, .overflowPortraitCard, .overflowBackdropCard{border-radius:var(--flix-radius)!important;overflow:hidden;background:transparent!important;box-shadow:none!important}
+.cardImageContainer, .cardPadder{border-radius:var(--flix-radius)!important;background:var(--flix-card)!important}
+.cardImageContainer::after{content:"";position:absolute;inset:0;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;border-radius:inherit}
+.card:hover .cardImageContainer::after{background:rgba(255,255,255,.06);transform:scale(1.02);box-shadow:var(--flix-shadow)}
+.innerCardFooter,.cardText{color:var(--flix-sub)!important}
+.flix-hover{position:absolute;inset:auto 0 0 0;display:none;background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.85));color:#fff;padding:8px 10px;font-size:.9rem}
+.card:hover .flix-hover{display:block}
+.searchFields, .inputContainer, input[type="search"], input[type="text"]{background:var(--flix-panel)!important;color:var(--flix-text)!important;border-radius:999px!important;border:1px solid rgba(255,255,255,.12)!important}
+.dialog, .paperList, .paperList .listItem, .drawerContent{background:var(--flix-panel)!important;color:var(--flix-text)!important;border-radius:var(--flix-radius-lg)!important;box-shadow:var(--flix-shadow)!important}
+*:focus-visible{outline:3px solid rgba(229,9,20,.7)!important;outline-offset:2px;border-radius:6px}
+.portraitCard .cardPadder{padding-bottom:150%!important}
+.backdropCard .cardPadder{padding-bottom:56.25%!important}
